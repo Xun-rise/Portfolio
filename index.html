@@ -1,13 +1,63 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Portfolio</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <app-root></app-root>
+  <div class="flex-container">
+    <section class="about">
+      <h2>About me</h2>
+      <img src="" alt="">
+      <p>Hi, I'm Martin Galusinski, a backend software engineer with a passion for game development. Based in Vienna, I
+        specialize in Java and have a knack for crafting efficient and scalable systems.</p>
+      <p>Contact me: <span id="email"></span></p>
+      <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+          var user = 'martin.galusinski';
+          var domain = 'live.at';
+          var email = user + '@' + domain;
+          document.getElementById('email').innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+        });
+      </script>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Programming Languages:</strong> Java</li>
+        <li><strong>Frameworks:</strong>Spring</li>
+        <li><strong>Tools: </strong>Git, Docker, Jenkins</li>
+      </ul>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Example Project</h3>
+        <p>Description of Project</p>
+        <p><strong>Technologies Used:</strong> Java</p>
+      </div>
+    </section>
+    <section id="experience">
+      <h2>Experience</h2>
+      <div id="job">
+        <h3>Software Engineer - BearingPoint</h3>
+        <p><strong>Duration: </strong> 2020 - 2023</p>
+        <ul>
+          <li>Responsibility 1</li>
+          <li>Responsibility 2</li>
+        </ul>
+      </div>
+    </section>
+  </div>
 </body>
+
 </html>
